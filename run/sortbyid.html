@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sort List by ID</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<ul id="cat">
+			<li id="3">Text 3</li>
+			<li id="2">Text 2</li>
+			<li id="1">Text 1</li>
+			<li id="9">Text 9</li>
+			<li id="11">Text 11</li>
+			<li id="5">Text 5</li>
+			<li id="7">Text 7</li>
+			<li id="6">Text 6</li>
+			<li id="12">Text 12</li>
+			<li id="4">Text 4</li>
+			<li id="10">Text 10</li>
+			<li id="8">Text 8</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		// http://jsfiddle.net/THMu3/370/
+
+		$("#cat li").sort(function(a, b) {
+			return parseInt(a.id) - parseInt(b.id);
+		}).each(function() {
+			var elem = $(this);
+			elem.remove();
+			$(elem).appendTo("#cat");
+		});
+	</script>
+</body>
+</html>

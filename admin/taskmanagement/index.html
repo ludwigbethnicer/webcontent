@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task Management</title>
+	<link rel="stylesheet" href="/cssbootstrap431">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="/jquery340"></script>
+	<script src="/jsbootstrap431"></script>
+	<link rel="stylesheet" href="/adminstyle">
+	<script src="/adminscript" defer></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="grp-menu">
+			<ul class="choose-menu">
+				<li><a href="/api_create_task" target="_blank" class="btn btn-primary">Add</a></li>
+				<li><a href="/api_read_task" target="_blank" class="btn btn-info">View</a></li>
+				<li><a href="/api_update_task" target="_blank" class="btn btn-danger">Edit</a></li>
+				<li><a href="/api_delete_task" target="_blank" class="btn btn-success">Delete</a></li>
+			</ul>
+		</div>
+		<div class="choices-status">
+			<div class="project-status">
+				<h4>New Task</h4>
+				<ul id="prj_new_task" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"><li id="task1" class="choose-task" draggable="true" ondragstart="drag(event)">1</li><li id="task2" class="choose-task" draggable="true" ondragstart="drag(event)">2</li></ul>
+			</div>
+			<div class="project-status">
+				<h4>Return</h4>
+				<ul id="prj_return" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+			<div class="project-status">
+				<h4>In Progress</h4>
+				<ul id="prj_in_progress" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+			<div class="project-status">
+				<h4>For Verification</h4>
+				<ul id="prj_for_verification" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+			<div class="project-status">
+				<h4>Verified</h4>
+				<ul id="prj_verified" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+			<div class="project-status">
+				<h4>Complete</h4>
+				<ul id="prj_complete" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+			<div class="project-status">
+				<h4>Overdue</h4>
+				<ul id="prj_overdue" class="choose-status" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

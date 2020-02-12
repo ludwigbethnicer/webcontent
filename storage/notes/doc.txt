@@ -1,0 +1,22 @@
+Instruction:
+
+Unzip the webcontent.zip
+
+Run serverless for PHP on Git command or Windows Command Prompt @ directory/folder [webcontent]
+
+	$ php -S localhost:3000
+
+Install Database, run @ browser:
+
+	http://localhost:3000/database
+
+App: Task Management
+
+	http://localhost:3000/taskmngr
+
+URL for Task API:
+
+	Create	:	http://localhost:3000/api_create_task
+	Read	:	http://localhost:3000/api_read_task
+	Update	:	http://localhost:3000/api_update_task
+	Delete	:	http://localhost:3000/api_delete_task

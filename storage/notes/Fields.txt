@@ -1,0 +1,96 @@
+taskno
+title
+xdesc
+stat_id
+notes
+remarks
+date_created
+date_modified
+date_completed
+created_by
+verified_by
+completed_by
+due_date
+date_time_remain
+
+title, xdesc, stat_id, notes, remarks, date_created, date_modified, date_completed, created_by, verified_by, completed_by, due_date, date_time_remain
+
+
+$this->title=htmlspecialchars(strip_tags($this->title));
+$this->xdesc=htmlspecialchars(strip_tags($this->xdesc));
+$this->stat_id=htmlspecialchars(strip_tags($this->stat_id));
+$this->notes=htmlspecialchars(strip_tags($this->notes));
+$this->remarks=htmlspecialchars(strip_tags($this->remarks));
+$this->date_created=htmlspecialchars(strip_tags($this->date_created));
+$this->date_modified=htmlspecialchars(strip_tags($this->date_modified));
+$this->date_completed=htmlspecialchars(strip_tags($this->date_completed));
+$this->created_by=htmlspecialchars(strip_tags($this->created_by));
+$this->verified_by=htmlspecialchars(strip_tags($this->verified_by));
+$this->completed_by=htmlspecialchars(strip_tags($this->completed_by));
+$this->due_date=htmlspecialchars(strip_tags($this->due_date));
+$this->date_time_remain=htmlspecialchars(strip_tags($this->date_time_remain));
+
+
+
+$stmt->bindParam(":title", $this->title);
+$stmt->bindParam(":xdesc", $this->xdesc);
+$stmt->bindParam(":stat_id", $this->stat_id);
+$stmt->bindParam(":notes", $this->notes);
+$stmt->bindParam(":remarks", $this->remarks);
+$stmt->bindParam(":date_created", $this->date_created);
+$stmt->bindParam(":date_modified", $this->date_modified);
+$stmt->bindParam(":date_completed", $this->date_completed);
+$stmt->bindParam(":created_by", $this->created_by);
+$stmt->bindParam(":verified_by", $this->verified_by);
+$stmt->bindParam(":completed_by", $this->completed_by);
+$stmt->bindParam(":due_date", $this->due_date);
+$stmt->bindParam(":date_time_remain", $this->date_time_remain);
+
+
+
+!empty($data->title) &&
+!empty($data->xdesc) &&
+!empty($data->stat_id) &&
+!empty($data->notes) &&
+!empty($data->created_by) &&
+!empty($data->verified_by) &&
+!empty($data->completed_by) &&
+!empty($data->due_date)
+
+
+
+$tbl_task->title = $data->title;
+$tbl_task->xdesc = $data->xdesc;
+$tbl_task->stat_id = $data->stat_id;
+$tbl_task->notes = $data->notes;
+$tbl_task->date_created = $data->date_created;
+$tbl_task->date_modified = $data->date_modified;
+$tbl_task->date_completed = $data->date_completed;
+$tbl_task->created_by = $data->created_by;
+$tbl_task->verified_by = $data->verified_by;
+$tbl_task->completed_by = $data->completed_by;
+$tbl_task->due_date = $data->due_date;
+
+
+
+
+task.notes, task.remarks, task.date_created, task.date_modified, task.date_completed, task.created_by, task.verified_by, task.completed_by, task.due_date, task.date_time_remain
+
+title=:title, 
+xdesc=:xdesc, 
+stat_id=:stat_id, 
+notes=:notes, 
+remarks=:remarks, 
+date_created=:date_created, 
+date_modified=:date_modified, 
+date_completed=:date_completed, 
+created_by=:created_by, 
+verified_by=:verified_by, 
+completed_by=:completed_by, 
+due_date=:due_date, 
+date_time_remain=:date_time_remain
+
+title=:title, xdesc=:xdesc, stat_id=:stat_id, notes=:notes, remarks=:remarks, date_created=:date_created, date_modified=:date_modified, date_completed=:date_completed, 
+created_by=:created_by, verified_by=:verified_by, completed_by=:completed_by, due_date=:due_date, date_time_remain=:date_time_remain
+
+title = :title, xdesc = :xdesc, notes = :notes, remarks = :remarks, date_created = :date_created, date_modified = :date_modified, date_completed = :date_completed, created_by = :created_by, verified_by = :verified_by, completed_by = :completed_by, due_date = :due_date, date_time_remain = :date_time_remain, stat_id = :stat_id

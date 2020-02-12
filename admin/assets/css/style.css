@@ -1,0 +1,107 @@
+label, p, h4 {
+	word-break: break-word;
+}
+
+.choose-menu {
+	padding: 4px;
+	margin-bottom: 0px;
+	text-align: end;
+}
+
+.choose-menu li {
+	list-style: none;
+	display: inline-block;
+	padding: 2px 2px;
+}
+
+.task-process {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.task-process li {
+	list-style: none;
+	display: inline-block;
+	width: 48%;
+}
+
+.close-right {
+	text-align: right;
+	padding-right: 1px;
+	vertical-align: super;
+}
+
+.close-right a {
+	color: red;
+	text-decoration: none;
+}
+
+.choices-status {
+	margin-top: 4px;
+}
+
+.project-status {
+	border: 1px solid black;
+	width: 14%;
+	display: inline-block;
+	vertical-align: text-top;
+	border-radius: 5px;
+}
+
+.project-status h4 {
+	text-align: center;
+}
+
+.choose-status {
+	padding: 4px;
+	margin-bottom: 0px;
+	height: 100vh;
+	background-color: #e6e6e6;
+	border-radius: 5px;
+	margin: 4px;
+}
+
+.choose-task {
+	display: block;
+	border-radius: 5px;
+	padding: 4px;
+	margin-bottom: 2px;
+	background-color: #ffcc99;
+}
+
+.choose-task label,
+.choose-task p {
+	padding: 4px 8px;
+	border-radius: 5px;
+}
+
+.choose-task label {
+	background-color: #6699ff;
+	width: 100%;
+}
+
+.task-prior {
+	position: absolute;
+}
+
+.choose-task p {
+	background-color: #ccffff;
+}
+
+@media only screen and (max-width: 1024px) {
+	.project-status {
+		width: 24%;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.project-status {
+		width: 49%;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.project-status {
+		width: 100%;
+	}
+}
