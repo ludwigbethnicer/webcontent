@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"and","comments":{"zero":"Be The First To Comment!","multiple":"{num} Comments","one":"1 Comment"}},"counts":[{"id":"117 https:\/\/codeofaninja.com\/?p=117","comments":142},{"id":"https:\/\/codeofaninja.com\/2013\/03\/php-login-script.html","comments":142}]});
+}

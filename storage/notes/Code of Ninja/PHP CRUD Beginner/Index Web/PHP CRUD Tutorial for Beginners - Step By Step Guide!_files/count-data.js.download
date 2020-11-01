@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"and","comments":{"zero":"Be The First To Comment!","multiple":"{num} Comments","one":"1 Comment"}},"counts":[{"id":"7 https:\/\/codeofaninja.com\/?p=7","comments":157},{"id":"https:\/\/codeofaninja.com\/2011\/12\/php-and-mysql-crud-tutorial.html","comments":157}]});
+}

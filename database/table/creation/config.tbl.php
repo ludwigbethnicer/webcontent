@@ -6,7 +6,7 @@
 	$chksql = $dbcretbl->query($chksql); //$db needs to be PDO instance
 
 	if($chksql) {
-		echo "Database Table: CONFIG; Already exist!<br>";
+		echo "Database Table: System Configuration; Already exist!<br>";
 	} else {
 		try {
 			$sql = "CREATE TABLE IF NOT EXISTS CONFIG(
@@ -22,8 +22,9 @@
 				title varchar(28) NOT NULL
 			);";
 			$dbcretbl->exec($sql);
-			echo "Database Table created successfully: CONFIG<br>";
+			echo "Database Table created successfully: System Configuration<br>";
 		} catch(PDOException $e) {
 			echo $e->getMessage()."<br>";
 		}
+		$dbcnn = null;
 	}

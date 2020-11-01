@@ -6,7 +6,7 @@
 	$chksql = $dbcretbl->query($chksql); //$db needs to be PDO instance
 
 	if($chksql) {
-		echo "Database Table: TBL_TASK_STATUS; Already exist!<br>";
+		echo "Database Table: Task Status (Listing); Already exist!<br>";
 	} else {
 		try {
 			$sql = "CREATE TABLE IF NOT EXISTS TBL_TASK_STATUS(
@@ -14,7 +14,7 @@
 				stat VARCHAR(18) NULL
 			);";
 			$dbcretbl->exec($sql);
-			echo "Database Table created successfully: TBL_TASK_STATUS<br>";
+			echo "Database Table created successfully: Task Status (Listing).<br>";
 
 			$sql = "INSERT INTO tbl_task_status (stat) VALUES ('New Task'),('Return'),('In Progress'),('For Verification'),('Verified'),('Complete'),('Overdue')";
 			// use exec() because no results are returned
@@ -23,4 +23,5 @@
 		} catch(PDOException $e) {
 			echo $e->getMessage()."<br>";
 		}
+		$dbcnn = null;
 	}

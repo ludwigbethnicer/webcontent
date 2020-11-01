@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"and","comments":{"zero":"Be The First To Comment!","multiple":"{num} Comments","one":"1 Comment"}},"counts":[{"id":"1652 https:\/\/www.codeofaninja.com\/?p=1652","comments":383},{"id":"https:\/\/codeofaninja.com\/2014\/06\/php-object-oriented-crud-example-oop.html","comments":383}]});
+}

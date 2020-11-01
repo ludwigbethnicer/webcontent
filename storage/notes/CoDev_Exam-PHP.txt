@@ -1,0 +1,89 @@
+1.) Find the bug(s) and modify one line of code in the incorrect implementation of a function solution that us supposed to return the smallest element of the given non-empty arrat A which contains at most 1000 integers within range [-1000 ... 1000].
+
+Notice that for the example test case A=[-1, 1, -2, 2] the attached code is already returning the correct answer (-2).
+
+	Solution: #PHP
+	https://www.w3schools.com/pHP/func_math_min.asp
+
+	<?php
+
+		function solution($A) {
+			$ans = 0;
+			for ($i = 1; $i < sizeof($A); $i++) {
+				if ($ans > $A[$i])
+				$ans = $A[$i];
+			}
+			return $ans;
+		}
+
+	-----
+
+	Codility Problem:
+
+	function solution(&$A) {
+		$ans = 0;
+		for ($i = 1; $i < sizeof($A); $i++) {
+			if ($ans > $A[$i])
+			$ans = $A[$i];
+		}
+		return $ans;
+	}
+
+2.) Write a function solution that returns a string of lenth N consisting of alternating characters: "+" and "-", string with a "+" character. You can assume N is between 1 and 100. For Example, give N=5, your function should return "+-+-+" and given N=4, it should return "+-+-".
+
+	Solution: #PHP
+
+	<?php
+
+		function altChar($num) {
+			$str = '';
+
+			for($x=1; $x<=$num; $x++) {
+				$str .= ( $x % 2 == 0 ? '-' : '+' );
+			}
+
+			return $str;
+		}
+
+		echo altChar(5);
+
+	// you can write to stdout for debugging purposes, e.g.
+// print "this is a debug message\n";
+
+function solution($N) {
+    // write your code in PHP7.0
+}
+
+3.) Write a function
+NSMutableArray * solution(int N);
+
+that, given an integer N (1 < N < 100), returns an array containing N unique integers that sum up to 0. The function can return any such array.
+
+For example, given N=4, the function could return [1,0,-3,2] or [-2,1,-4,5]. the answer [1,-1,1,3] would be incorrect (because value 1 occurs twice). For N=3 one of the possible answers is [-1,0,1] (but there are many more correct answers).
+
+	Solution: #PHP
+
+	<?php
+
+		function solution($num) {
+			$arr = [];
+			$size = $num;
+
+			for($i=0; $i < $size/2; $i++) {
+				$arr[$i] = ($i+1)*-1;
+			}
+
+			if($num%2!=0) {
+				for($i = $size /2; $i < $size; $i++) {
+					$arr[$i] = $i - ($size/2);
+				}
+			} else {
+				for($i = $size /2; $i < $size; $i++) {
+					$arr[$i] = $i - (($size/2)-1);
+				}
+			}
+
+			echo json_encode($arr);
+		}
+
+		echo solution(5);
